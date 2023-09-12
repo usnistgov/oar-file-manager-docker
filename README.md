@@ -37,7 +37,7 @@ To set up the `File Manager Docker`, perform the following steps:
 1. Open a terminal or command prompt.
 2. Run the following command to clone the `File Manager Docker` repository:
    ```
-   git clone --branch local https://gitlab.nist.gov/gitlab/mnm16/file-manager-docker
+   git clone --branch standalone https://github.com/usnistgov/oar-file-manager-docker
    ```
 3. Navigate to this repository:
     ```
