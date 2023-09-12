@@ -2,21 +2,21 @@ version: '3.8'
 
 services:
   nextcloud:
-    build: ./nextcloud-api
+    build: ./fm/nextcloud-api
     restart: always
     ports:
       - 8443:443
       - 8000:80
     volumes:
       - nextcloud-data:/var/www/html
-      - ./default-ssl.conf:/etc/apache2/sites-enabled/default-ssl.conf
-      - ./certs:/etc/ssl/private
+      - ./fm/default-ssl.conf:/etc/apache2/sites-enabled/default-ssl.conf
+      - ./fm/certs:/etc/ssl/private
     env_file:
       - ./fm/env/local.env
     depends_on:
-      - db
+      - mariadb
   file-manager:
-    build: ./fm-application-layer
+    build: ./fm/fm-application-layer
     restart: always
     ports:
       - 5000:5000
@@ -25,7 +25,7 @@ services:
     env_file:
       - ./fm/env/local.env
 
-  db:
+  mariadb:
     image: mariadb
     restart: always
     volumes:
