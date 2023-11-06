@@ -16,11 +16,12 @@ services:
     depends_on:
       - mariadb
   file-manager:
-    build: ./fm/fm-application-layer
+    build: ./fm/oar-fm-application-layer
     restart: always
     ports:
       - 5000:5000
     volumes:
+      - nextcloud-data:/shared
       - fm-data:/fm
     env_file:
       - ./fm/env/local.env
