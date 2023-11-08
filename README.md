@@ -41,7 +41,7 @@ To set up the `File Manager Docker`, perform the following steps:
    ```
 3. Navigate to this repository:
     ```
-    cd file-manager-docker
+    cd oar-file-manager-docker
     ```
 4. Make the script executable if necessary:
     ```
