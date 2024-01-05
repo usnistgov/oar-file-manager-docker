@@ -61,7 +61,7 @@ To set up the `File Manager Docker`, perform the following steps:
 To test the file manager, enter the following endpoint in a service like Postman:
 
 - Post request to authenticate: `http://127.0.0.1:5000/api/auth`
-- Use Basic Authentication with `API_USER` and `API_PWD` values of the /config/.env file. Default values are `oar_api` and `NISTnextcloudADMIN`.
+- Use Basic Authentication with `API_USER` and `API_PWD` values of the `/fm/env/local.env` file. Default values are `oar_api` and `NISTnextcloudADMIN`.
 - Copy the message returned, this is the JWT token to use to access all other endpoints.
 - Get request to test the API: `http://127.0.0.1:5000/api/test`
 
